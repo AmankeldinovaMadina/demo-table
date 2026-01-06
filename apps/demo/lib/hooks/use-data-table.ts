@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import {
   type ColumnFiltersState,
   getCoreRowModel,
@@ -23,15 +22,15 @@ import { useLocalStorage } from "./use-local-storage";
 
 interface UseDataTableProps<TData>
   extends Omit<
-      TableOptions<TData>,
-      | "state"
-      | "pageCount"
-      | "getCoreRowModel"
-      | "manualFiltering"
-      | "manualPagination"
-      | "manualSorting"
-    >,
-    Required<Pick<TableOptions<TData>, "pageCount">> {
+    TableOptions<TData>,
+    | "state"
+    | "pageCount"
+    | "getCoreRowModel"
+    | "manualFiltering"
+    | "manualPagination"
+    | "manualSorting"
+  >,
+  Required<Pick<TableOptions<TData>, "pageCount">> {
   paginationState: PaginationState;
   setPaginationState: (updaterOrValue: PaginationState) => void;
 
